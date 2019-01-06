@@ -13,7 +13,10 @@ class Login extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     const { email, password } = this.state;
-    const { auth: {handleLogin}, history } = this.props;
+    const {
+      auth: { handleLogin },
+      history
+    } = this.props;
     handleLogin({ email, password }, history);
   };
 
@@ -39,6 +42,7 @@ class Login extends React.Component {
             required
             name="password"
             placeholder="Password"
+            type="password"
             value={password}
             onChange={this.handleChange}
           />
